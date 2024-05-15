@@ -1,5 +1,5 @@
 public class CreationStory {
-    private String[] stories = {
+    private final String[] stories = {
             "Created Heavens and the Earth in the Beginning",
             "Brought light to the Earth from the Heavens",
             "Created the atmosphere by separating water between the earth and heavens",
@@ -13,7 +13,7 @@ public class CreationStory {
 
     public void getStories() {
         int day = 0;
-        String story = "";
+        String story;
         while (day < stories.length) {
             story = stories[day];
             System.out.println(story);
