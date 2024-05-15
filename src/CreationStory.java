@@ -21,4 +21,11 @@ public class CreationStory {
         }
     }
 
+    public String getStoryAtIndex(int day) {
+        if (day >= stories.length) {
+            return "No story at that particular day";
+        }
+        return stories[day];
+    }
+
 }
