@@ -1,31 +1,31 @@
+import java.util.ArrayList;
+
 public class CreationStory {
-    private final String[] stories = {
-            "Created Heavens and the Earth in the Beginning",
-            "Brought light to the Earth from the Heavens",
-            "Created the atmosphere by separating water between the earth and heavens",
-            "Created the land, sea and vegetation",
-            "Revealed the sun, moon and stars",
-            "Created sea creatures and birds",
-            "Created land animals and Humans",
-            "Rested on this day"
+    private final ArrayList<String> days = new ArrayList<>();
+    public CreationStory() {
+        days.add("Creating the Heavens🌌🌌 and the Earth🌍🌍 in the beginning");
+        days.add("Brought light on the first day☀️💡");
+        days.add("Form the atmosphere☁️☁️ on the second day");
+        days.add("Created land, sea⛵⛵ and vegetation on the third day🌱🪴🌿🌵");
+        days.add("Brought the sun🌅☀️, moon and stars on the fourth day");
+        days.add("Populates the sea with sea creatures🐟🦈🐡 and the sky with birds🦅🦆🐦 on the fifth day");
+        days.add("Created land animals🫎🫏🦁and humans 🫂🧑‍🤝‍🧑🤼 on the sixth day");
+        days.add("Rested🛌🛏️ on the seventh day");
+    }
 
-    };
-
-    public void getStories() {
+    public void getDays() {
         int day = 0;
-        String story;
-        while (day < stories.length) {
-            story = stories[day];
-            System.out.println(story);
+        while (day < days.size()) {
+            System.out.println(days.get(day));
             day ++;
         }
     }
 
-    public String getStoryAtIndex(int day) {
-        if (day >= stories.length) {
-            return "No story at that particular day";
+    public String getStoryAtDay(int day) {
+        if (day >= days.size()) {
+            return "No such day recorded in the Bible";
         }
-        return stories[day];
+        return days.get(day);
     }
 
 }
